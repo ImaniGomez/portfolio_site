@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    margin-right: 5em;
+    margin-top: 1em;
+    justify-content: flex-end; 
+    padding: 1rem;
+    background-color: #0F0F0F; 
+    font-family: 'Cormorant', serif;
+
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    /*margin: 0;*/
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: #C9C9C9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Laptop and Desktop */
+@media (min-width: 901px) {
+    .navbar{
+        font-size: 2rem;
+        gap: 6rem;
+    }
+
+}
+  
