@@ -38,11 +38,11 @@
 .film-blocks-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 5rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 85rem;
   padding: 0 1rem;
-  justify-content: center;
+  margin: 0
 }
   
 .film-block-item {

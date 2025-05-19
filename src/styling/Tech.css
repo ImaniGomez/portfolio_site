@@ -6,3 +6,34 @@
     font-weight: 200;
     margin-top: -0.5rem;
 }
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+  
+  .tech-block-item {
+    background-color: #1a1a1a;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .tech-title-overlay {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+  }
+  

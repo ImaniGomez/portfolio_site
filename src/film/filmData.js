@@ -5,7 +5,7 @@ export const films = [
       videoUrl: 'https://player.vimeo.com/video/yourVimeoID1',
       description: 'Written and Directed by Imani Gomez, this short experimental dance film combines digital cinematography, motion capture, 16mm film, 2D animation and 3D animation to express the feelings of loneliness and isolation.',
       crew: 'Written and Directed by Imani Gomez, Starring Arezu Tavakoli, Starring Tru Stites, Produced by Phoebe Yung, Cinematography by Jonsey DLS-Jones, 1st AD Rachel Chung, Choreography by Ailina Dohn, Special Thanks to David Rosfeld',
-      coverImage: './assets/intExp.png'
+      coverImage: '/photos/intExp.png'
     },
     {
       id: '1223',
@@ -29,6 +29,6 @@ export const films = [
       videoUrl: '/Users/imanigomez/Desktop/portfolio/site-app/src/assets/cofcs.jpg',
       description: 'Coming Soon ',
       crew: 'Directed and Produced by Imani Gomez',
-      coverImage: '/Users/imanigomez/Desktop/portfolio/site-app/src/assets/cofcs.jpg'
+      coverImage: '/photos/cofcs.jpg'
     }
   ];

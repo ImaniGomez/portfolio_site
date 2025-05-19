@@ -7,6 +7,7 @@ import Tech from './tech/Tech';
 import Film from './film/Film';
 import About from './About';
 import FilmPage from './film/FilmPage';
+import PhotoPage from './photo/Photography';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Tech" element={<Tech />} />
           <Route path="/Film" element={<Film />} />
           <Route path="/films/:id" element={<FilmPage />} />
+          <Route pate="/Photography" element={<PhotoPage />} />
         </Routes>
         
 

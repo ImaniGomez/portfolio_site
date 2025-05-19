@@ -26,13 +26,13 @@ function Film() {
                     <Link to={`/films/${film.id}`} key={film.id} className="film-block-item">
                     <div
                         className="film-background"
-                        style={{
-                        backgroundImage: `url(${film.thumbnailUrl || film.coverImage})`
-                        }}
+                        style={{backgroundImage: `url(${film.coverImage})`}}
                     >
+                        {/*
                         <div className="film-title-overlay">
                         <h2>{film.title}</h2>
                         </div>
+                        */}
                     </div>
                     </Link>
                 ))}
