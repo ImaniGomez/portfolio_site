@@ -58,7 +58,7 @@ function About(){
             
               <Link to="/Tech" className="noStyling PhotoText">
               <div className="work-block software-block">
-                <p className="PhotoText">Software Projects</p>
+                <p className="PhotoText">Tech and Software</p>
                 </div>
               </Link>
             

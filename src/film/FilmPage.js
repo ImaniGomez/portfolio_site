@@ -14,8 +14,14 @@ function FilmPage() {
 
     const currentIndex = films.findIndex(film => film.id === id); // adjust based on your data structure
 
-    const prevFilm = films[currentIndex - 1];
-    const nextFilm = films[currentIndex + 1];
+    const prevFilm = currentIndex > 0
+    ? films[currentIndex - 1]
+    : films[films.length - 1];
+
+    const nextFilm = currentIndex < films.length - 1
+    ? films[currentIndex + 1]
+    : films[0];
+    
     let crewList = film.crew.split(",").map(line => <span>{line},<br/></span>);
   return (
     <>
