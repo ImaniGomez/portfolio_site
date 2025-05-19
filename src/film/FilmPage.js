@@ -21,7 +21,7 @@ function FilmPage() {
     const nextFilm = currentIndex < films.length - 1
     ? films[currentIndex + 1]
     : films[0];
-    
+
     let crewList = film.crew.split(",").map(line => <span>{line},<br/></span>);
   return (
     <>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../styling/Film.css';
 import { films } from './filmData';
 import { Link } from 'react-router-dom';
+import Contact from '../Contact';
 
 function Film() {
     return (
@@ -20,15 +21,25 @@ function Film() {
                 </div>
 
                  {/* Film Blocks */}
-                <div className="film-blocks">
-                    {films.map((film) => (
-                        <Link to={`/films/${film.id}`} key={film.id} className="film-block">
+                 <div className="film-blocks-container">
+                {films.map((film) => (
+                    <Link to={`/films/${film.id}`} key={film.id} className="film-block-item">
+                    <div
+                        className="film-background"
+                        style={{
+                        backgroundImage: `url(${film.thumbnailUrl || film.coverImage})`
+                        }}
+                    >
+                        <div className="film-title-overlay">
                         <h2>{film.title}</h2>
-                        </Link>
-                    ))}
+                        </div>
+                    </div>
+                    </Link>
+                ))}
                 </div>
             </div>
 
+            <Contact />
         
         </>
     );

@@ -26,9 +26,9 @@ export const films = [
     {
       id: '2025',
       title: 'The Cost of Freedom',
-      videoUrl: 'https://player.vimeo.com/video/yourVimeoID2',
+      videoUrl: '/Users/imanigomez/Desktop/portfolio/site-app/src/assets/cofcs.jpg',
       description: 'Coming Soon ',
       crew: 'Directed and Produced by Imani Gomez',
-      coverImage: '/images/film-one.jpg'
+      coverImage: '/Users/imanigomez/Desktop/portfolio/site-app/src/assets/cofcs.jpg'
     }
   ];

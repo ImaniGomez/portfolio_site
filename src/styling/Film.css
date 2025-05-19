@@ -36,31 +36,61 @@
 }
 
 .film-blocks-container {
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    justify-content: center;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  justify-content: center;
+}
   
-  .film-block-item {
-    background-color: #1a1a1a;
-    color: white;
-    flex: 1 1 calc(50% - 2rem); /* 2 per row with gap */
-    min-width: 10rem;
-    padding: 15rem;
-    border-radius: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
-  
+.film-block-item {
+  aspect-ratio: 16 / 9;
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
   .reelBlock{
     border: 3em;
   }
+
+  .film-block-item img,
+.film-block-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.film-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.film-title-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
   /* Stack on mobile */
   @media (max-width: 768px) {
     .film-block-item {
