@@ -1,40 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link,  useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import Contact from './Contact';
-import './App.css';
+import './styling/App.css';
+import profilePic from './assets/profile-pic.jpeg';
+import Tech from './tech/Tech';
+import Film from './film/Film';
+import About from './About';
+import FilmPage from './film/FilmPage';
 
 function App() {
   return (
-    <>
-    <Navbar />
-    <div className="main-content">
-        <h1 className = "greeting">Hi, There!</h1>
-        <p className="greeting-paragraph">Hello! My name is Imani Gomez. I am a computer engineering graduate <br></br>
-        student at NYU. My background in computer engineering and film <br></br>
-        production allows me to use my skills in machine learning, full stack<br></br> 
-        development, and digital media workflows to drive innovation in the<br></br> 
-        entertainment industry. This gives me a unique perspective on how <br></br>
-        technology shapes the future of storytelling and I am constantly<br></br> 
-        looking for new opportunities to learn and advance the industry forward.<br></br>
-        <br></br>
-        Additionally, I have a passion for the art form of photography. I have <br></br>
-        been shooting for 10 years and while I mostly focus on sports, I also<br></br> 
-        love anything from portraits to fashion to street photography. </p>
-    </div>
+    <Router>
+      <>
+        <Navbar />
 
-    <div className="work-content">
-        <span className="work-title">MY WORK</span>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/Tech" element={<Tech />} />
+          <Route path="/Film" element={<Film />} />
+          <Route path="/films/:id" element={<FilmPage />} />
+        </Routes>
+        
 
-        <div className="work-block-pages">
-          <div className="work-block">Photography</div>
-          <div className="work-block">Software Projects</div>
-          <div className="work-block">Films</div>
-        </div>
-    </div>
 
-    <Contact />
-
-    </>
+      </>
+    </Router>
   );
 }
 

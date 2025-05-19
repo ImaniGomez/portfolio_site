@@ -1,16 +1,22 @@
 import React from 'react';
-import './Navbar.css';
+import './styling/Navbar.css';
+import { Link } from 'react-router-dom';
+import logo from './assets/logo.png';
+
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-      <ul className="nav-links">
-        <li><a href="/">About</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  );
-}
+    return (
 
-export default Navbar;
+    
+      <nav className="navbar">
+        <img src={logo} alt="LogoImg" className="logo" />
+        <ul className="nav-links">
+          <li><Link to="/">About</Link></li>
+          <li><Link to="/#work">Work</Link></li>
+          <li><Link to="/#contact">Contact</Link></li>
+        </ul>
+      </nav>
+    );
+  }
+  
+  export default Navbar;

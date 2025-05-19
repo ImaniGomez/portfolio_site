@@ -1,0 +1,287 @@
+body {
+  font-family: 'Inter';
+  margin: 0;
+  background-color: #0F0F0F;
+  color: white;
+}
+
+.main-content{
+  align-items: center;
+  color: #C9C9C9;
+  
+}
+
+.work-title{
+  color: #C9C9C9;
+}
+
+.greeting{
+  font-family: 'Cormorant', serif;
+}
+
+
+.work-content {
+  position: relative;
+  margin: 5rem 1rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.work-content::before {
+  content: '';
+  position: absolute;
+  top: 4.5rem; 
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: white;
+  z-index: 1;
+  text-align: right;
+}
+
+
+.work-title {
+  font-family: 'Cormorant', serif;
+  display: inline-block;
+  background-color: #0F0F0F;
+  padding: 0 1rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  margin-left: auto; 
+}
+
+
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  object-fit: cover;
+}
+
+.work-block-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 1rem;
+}
+
+.PhotoText{
+  font-size: 2rem;
+  font-family: 'Inter';
+  color: white;
+}
+
+a.no-styling,
+a.no-styling:visited,
+a.no-styling:hover,
+a.no-styling:active{
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.block {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* === Photography Block with Background Image === */
+
+
+.photography-block {
+  background-image: url('/Users/imanigomez/Desktop/portfolio/site-app/src/assets/MalPasoDancers.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.photography-block::before {
+  content: '';
+  opacity: 80%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+.photography-block:hover::before{
+  background: rgba(0,0,0, 0.7);
+}
+
+.photography-block span,
+.photography-block p {
+  z-index: 1;
+  position: relative;
+}
+
+/* === film block with background photo === */
+
+.film-block{
+  background-image: url('/Users/imanigomez/Desktop/portfolio/site-app/src/assets/intExp.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.film-block::before {
+  content: '';
+  opacity: 80%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  z-index:0;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.film-block:hover::before {
+  background: rgba(0,0,0,0.7);
+}
+
+.film-block span,
+.film-block p {
+  z-index: 1;
+  position: relative;
+}
+
+
+/* === tech block with background photo === */
+.software-block{
+  background-image: url('/Users/imanigomez/Desktop/portfolio/site-app/src/assets/tech.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  filter: grayscale(100%);
+  position: relative;
+  z-index: 1;
+}
+
+.software-block::before {
+  content: '';
+  opacity: 80%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  z-index:0;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.software-block:hover::before {
+  background: rgba(0,0,0,0.7);
+}
+
+.software-block span,
+.software-block p {
+  z-index: 1;
+  position: relative;
+}
+
+
+.intro-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 9rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile {
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -6rem;
+  filter: grayscale(100%);
+}
+
+.greeting-paragraph {
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .work-block-pages {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .block {
+    width: 48%;
+  }
+}
+
+/* Laptop and Desktop */
+@media (min-width: 901px) {
+
+  .greeting {
+    font-size: 4rem;
+    margin-left: 2em;
+  }
+
+  .greeting-paragraph{
+    font-size: 1.5em;
+    margin-left: 5em;
+  }
+
+  /*
+  .main-content{
+    margin-left: em;
+  }
+  */
+
+  .work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 4rem;
+  }
+  
+  .work-title {
+    font-family: 'Cormorant', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #C9C9C9;
+    margin-bottom: 2rem;
+    margin-right: 6rem;
+  }
+  
+  .work-block-pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the blocks */
+    gap: 2rem;
+  }
+  
+  .work-block {
+    background-color: #1a1a1a;
+    padding: 6rem;
+    border-radius: 1rem;
+    color: #C9C9C9;
+    text-align: center;
+    min-width: 250px;
+  }
+
+  .block {
+    width: 50%;
+  }
+}
